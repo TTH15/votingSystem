@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>写真選択投票アプリ</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>写真を選択してください</h1>
+        <div class="photos">
+            <div class="photo" data-id="1">
+                <div class="photo-label">No.1</div>
+                <div class="zoom-icon">🔍</div>
+            </div>
+            <div class="photo" data-id="2">
+                <div class="photo-label">No.2</div>
+                <div class="zoom-icon">🔍</div>
+            </div>
+            <div class="photo" data-id="3">
+                <div class="photo-label">No.3</div>
+                <div class="zoom-icon">🔍</div>
+            </div>
+            <div class="photo" data-id="4">
+                <div class="photo-label">No.4</div>
+                <div class="zoom-icon">🔍</div>
+            </div>
+            <div class="photo" data-id="5">
+                <div class="photo-label">No.5</div>
+                <div class="zoom-icon">🔍</div>
+            </div>
+            <div class="photo" data-id="6">
+                <div class="photo-label">No.6</div>
+                <div class="zoom-icon">🔍</div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="selection">選択された写真番号: <span id="selected-photo">なし</span></div>
+        <button id="submit-btn">送信する</button>
+    </footer>
+
+    <!-- ポップアップ用の画像表示エリア -->
+    <div id="popup" class="popup">
+        <span id="close-popup" class="close-popup">&times;</span>
+        <div class="popup-content">
+            <div class="popup-photo"></div>
+        </div>
+    </div>
+
+    <!-- ローディングアニメーションと結果表示用のエリア -->
+    <div id="result-modal" class="result-modal">
+        <div class="loading-spinner" id="loading-spinner"></div>
+        <div class="result-message" id="result-message">
+            ✔️ 投票を受け付けました！
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
